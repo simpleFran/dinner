@@ -1,7 +1,7 @@
 import React from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
-import images from '../../constants/images';
+// import images from '../../constants/images';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -9,19 +9,20 @@ const Navbar = () => {
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <img src={images.gericht} alt="app__logo" />
+        {/* <img src={images.gericht} alt="app__logo" /> */}
+        <h1 className="app__logo-text">Dinner</h1>
       </div>
       <ul className="app__navbar-links">
         <li className="p__opensans"><a href="#home">Home</a></li>
-        <li className="p__opensans"><a href="#about">About</a></li>
+        <li className="p__opensans"><a href="#about">Sobre</a></li>
         <li className="p__opensans"><a href="#menu">Menu</a></li>
-        <li className="p__opensans"><a href="#awards">Awards</a></li>
-        <li className="p__opensans"><a href="#contact">Contact</a></li>
+        <li className="p__opensans"><a href="#awards">Prêmios</a></li>
+        <li className="p__opensans"><a href="#contact">Contato</a></li>
       </ul>
       <div className="app__navbar-login">
-        <a href="#login" className="p__opensans">Log In / Registration</a>
+        <a href="#login" className="p__opensans">Log In / Cadastre-se</a>
         <div />
-        <a href="/" className="p__opensans">Book Table</a>
+        <a href="/" className="p__opensans">Reservar Mesa</a>
       </div>
       <div className="app__navbar-smallscreen">
         <GiHamburgerMenu color="#fff" fontSize={27} onClick={() => setToggleMenu(true)} />
@@ -30,10 +31,10 @@ const Navbar = () => {
             <MdOutlineRestaurantMenu fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
             <ul className="app__navbar-smallscreen_links">
               <li><a href="#home" onClick={() => setToggleMenu(false)}>Home</a></li>
-              <li><a href="#about" onClick={() => setToggleMenu(false)}>About</a></li>
+              <li><a href="#about" onClick={() => setToggleMenu(false)}>Sobre</a></li>
               <li><a href="#menu" onClick={() => setToggleMenu(false)}>Menu</a></li>
-              <li><a href="#awards" onClick={() => setToggleMenu(false)}>Awards</a></li>
-              <li><a href="#contact" onClick={() => setToggleMenu(false)}>Contact</a></li>
+              <li><a href="#awards" onClick={() => setToggleMenu(false)}>Prêmios</a></li>
+              <li><a href="#contact" onClick={() => setToggleMenu(false)}>Contato</a></li>
             </ul>
           </div>
         )}
